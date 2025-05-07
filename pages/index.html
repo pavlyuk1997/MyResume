@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Автоматизація в дії</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism.css" rel="stylesheet" />
+</head>
+<body> 
+  <header>
+    <div class="navbar">
+      <div class="menu">
+        <a href="index.html">Автоматизація</a>
+        <a href="about.html">Про мене</a>
+      </div>
+      <div class="contacts">
+        <div>📞 +38(096) <strong>194 50 91</strong></div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="left">
+      <h3>Код автоматизації</h3>
+      <pre><code class="language-csharp">
+// LoginTest.cs
+driver.FindElement(By.Id("login")).Click();
+driver.SendKeys("admin");
+driver.Click(By.Id("submit"));
+Assert.IsTrue(page.IsLoggedIn);
+      </code></pre>
+    </div>
+    <div class="right">
+      <h3>Результат</h3>
+      <img id="screenshot" src="images/step1.png" alt="Screenshot">
+      <button onclick="nextStep()">Наступний крок</button>
+    </div>
+  </div>
+
+  <script src="../scripts/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-csharp.min.js"></script>
+</body>
+</html>
