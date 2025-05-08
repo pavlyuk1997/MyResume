@@ -21,21 +21,20 @@
   <div class="container">
     <div class="left">
       <h3>Код автоматизації</h3>
-      <pre><code class="language-csharp">
-// LoginTest.cs
-driver.FindElement(By.Id("login")).Click();
-driver.SendKeys("admin");
-driver.Click(By.Id("submit"));
-Assert.IsTrue(page.IsLoggedIn);
+      <pre><code id="code-block" class="language-csharp">
       </code></pre>
     </div>
     <div class="right">
       <h3>Результат</h3>
-      <img id="screenshot" src="images/step1.png" alt="Screenshot">
+      <video id="video" width="100%" controls>
+        <source src="../videos/SharpSeleniumTest.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
       <button onclick="nextStep()">Наступний крок</button>
     </div>
   </div>
 
+  <script src="../scripts/load-test.js"></script>
   <script src="../scripts/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-csharp.min.js"></script>

@@ -18,6 +18,7 @@ namespace SharpAutomation.Pages
 
         public VacancyPage GetBodyText (out string text) 
         {
+            Highlight(VacancyBody);
             text = VacancyBody.Text;
             return this;
         }
