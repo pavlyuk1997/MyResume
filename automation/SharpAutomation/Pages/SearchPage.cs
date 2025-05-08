@@ -23,6 +23,7 @@ namespace SharpAutomation.Pages
 
         public SearchPage GetSearchInputText(out string text)
         {
+            Highlight(SearchInput);
             text = SearchInput.GetAttribute("value");
 
             return this;
@@ -30,6 +31,7 @@ namespace SharpAutomation.Pages
 
         public SearchPage GetResultsCount(out int count)
         {
+            Highlight(Driver.FindElement(By.ClassName("gsc-wrapper")));
             count = Results.Length;
             return this;
         }

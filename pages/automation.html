@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Автоматизація в дії</title>
+  <link rel="stylesheet" href="../styles/default.css">
+  <link rel="stylesheet" href="../styles/automation.css">  
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism.css" rel="stylesheet" />
+</head>
+<body> 
+  <header id="site-header"></header>
+  <div class="container">
+    <div class="left">
+        <h3>Вибір технології</h3>
+        <label>Мова:</label>
+        <select id="languageSelect">
+          <option value="csharp">C#</option>
+          <option value="js">JavaScript</option>
+        </select>
+  
+        <label>Фреймворк:</label>
+        <select id="frameworkSelect">
+          <option value="selenium">Selenium</option>
+          <option value="playwright">Playwright</option>
+        </select>
+  
+        <h3>Код</h3>
+        <pre><code id="codeBlock" class="language-csharp">// loading...</code></pre>
+      </div>
+    <div class="right">
+      <h3>Результат</h3>
+      <video id="videoPlayer" controls>
+        <source src="../videos/csharp-selenium.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+      <div id="stepLabel" style="margin-bottom: 10px; font-weight: bold;"></div>
+      <button onclick="nextStep()">Наступний крок</button>
+    </div>
+  </div>
+
+  <script src="../scripts/load-header.js"></script>
+  <script src="../scripts/automation.js"></script>
+  <script src="../scripts/load-test.js"></script>
+  <script src="../scripts/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-csharp.min.js"></script>
+</body>
+</html>

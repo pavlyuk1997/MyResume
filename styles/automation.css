@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .left, .right {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  pre {
+    background: #1e1e1e;
+    color: #dcdcdc;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  
+  img, video {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #0077cc;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  code[class*="language-"] {
+    display: block;
+    white-space: pre-wrap;
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 10px;
+    overflow-x: auto;
+  }
+  
+  .code-line {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .code-line.highlight {
+    border-left: 4px solid red;
+    background: #fff2f2;
+  }

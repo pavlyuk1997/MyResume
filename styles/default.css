@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #000;
+    color: white;
+    padding: 10px 30px;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  
+  .menu a:hover {
+    text-decoration: underline;
+  }
+  
+  .contacts {
+    text-align: right;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  
+  .contacts strong {
+    color: #f0c040;
+  }
+  
