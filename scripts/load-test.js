@@ -1,5 +1,5 @@
 function loadCode() {
-    fetch('../automation/SharpAutomation/Tests/SeleniumDemoTest.cs')
+    fetch('automation/SharpAutomation/Tests/SeleniumDemoTest.cs')
       .then(response => response.text())
       .then(code => {
         const codeBlock = document.getElementById('code-block');

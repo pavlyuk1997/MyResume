@@ -58,8 +58,8 @@ function nextStep() {
     const fw = frameworkSelect.value;
   
     const ext = lang === 'js' ? 'js' : 'cs';
-    const codeFile = `../code/${lang}/${fw}.${ext}`;
-    const videoFile = `../videos/${lang}-${fw}.mp4`;
+    const codeFile = `code/${lang}/${fw}.${ext}`;
+    const videoFile = `videos/${lang}-${fw}.mp4`;
     const stepFile = `../steps/${lang}-${fw}.js`;
   
     // Load full code FIRST
