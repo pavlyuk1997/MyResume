@@ -3,6 +3,11 @@ const frameworkSelect = document.getElementById('frameworkSelect');
 const codeBlock = document.getElementById('codeBlock');
 const videoPlayer = document.getElementById('videoPlayer');
 const stepLabel = document.getElementById('stepLabel');
+const frameworksByLanguage = {
+  csharp: ["Selenium", "Playwright", "Atata"],
+  js: ["Playwright", "WebDriverIO", "Cypress"]
+};
+
 
 let steps = [];
 let currentStep = 0;
@@ -14,6 +19,21 @@ function escapeHtml(text) {
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
+}
+
+function updateFrameworkOptions() {
+  const selectedLang = languageSelect.value;
+  const frameworks = frameworksByLanguage[selectedLang] || [];
+
+  // Clear previous options
+  frameworkSelect.innerHTML = '';
+
+  frameworks.forEach(fw => {
+    const opt = document.createElement('option');
+    opt.value = fw.toLowerCase(); // matches your file naming convention
+    opt.textContent = fw;
+    frameworkSelect.appendChild(opt);
+  });
 }
 
 function highlightLinesPrismReady(code, highlightLines = []) {
@@ -115,6 +135,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (languageSelect && frameworkSelect) {
     languageSelect.addEventListener('change', updateContent);
     frameworkSelect.addEventListener('change', updateContent);
+    updateFrameworkOptions();
     updateContent();
   }
+});
+
+languageSelect.addEventListener('change', () => {
+  updateFrameworkOptions();
+  updateContent(); // re-triggers loading code/video/etc
 });
