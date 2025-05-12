@@ -1,25 +1,50 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.left, .right {
+  flex: 1 1 100%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+pre {
+  background: #1e1e1e;
+  color: #dcdcdc;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 400px;
+  white-space: pre-wrap;
+}
+
+.right video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+@media (min-width: 1000px) {
   .left, .right {
-    flex: 1;
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    flex: 1 1 48%;
+    max-width: 48%;
   }
-  
-  pre {
-    background: #1e1e1e;
-    color: #dcdcdc;
-    padding: 10px;
-    border-radius: 8px;
-    overflow-x: auto;
-  }
-  
+}
+
+
   img, video {
     max-width: 100%;
     border: 1px solid #ccc;
